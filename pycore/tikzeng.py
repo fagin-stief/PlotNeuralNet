@@ -207,5 +207,10 @@ def to_generate( arch, pathname="file.tex" ):
             print(c)
             f.write( c )
      
+# Text with absolute position
+def to_Text(text, to="(0,0,0)", color="black", size="\\normalsize", name="textnode"):
+    return r"""
+\node[text="""+ color +""", font="""+ size +"""] (""" + name + """) at """+ to +""" {""" + text + """};
+"""
 
 
